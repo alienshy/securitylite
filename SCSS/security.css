@@ -86,6 +86,7 @@ header .headerlite .register i {
   }
 }
 .div {
+  z-index: 100;
   width: 100%;
   position: fixed;
   display: flex;
@@ -125,6 +126,7 @@ header .headerlite .register i {
 @media (max-width: 939px) and (min-width: 360px) {
   .div nav {
     width: 100%;
+    position: relative;
   }
   .div nav .navlite {
     width: 100%;
@@ -137,9 +139,20 @@ header .headerlite .register i {
     display: block;
     color: white;
     font-size: 30px;
+    z-index: 999;
   }
   .div nav ul {
+    width: 100%;
+    height: 600px;
     display: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    left: 0;
+    flex-direction: column;
+    padding: 300px 20px;
+    align-items: flex-start;
+    gap: 20px;
+    z-index: 80;
   }
 }
 section {
@@ -196,15 +209,31 @@ section .sectionlite .textdiv button:hover {
   color: rgb(255, 187, 0);
 }
 
+.load {
+  margin-left: calc(50% - 75px);
+  width: 150px;
+  height: 50px;
+  border: none;
+  background-color: rgb(255, 187, 0);
+  color: white;
+  font-size: 15px;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+.load:hover {
+  background-color: black;
+  border: 1px solid rgb(255, 187, 0);
+  color: rgb(255, 187, 0);
+}
+
 .section2 {
   width: 100%;
 }
 .section2 .section2lite {
   width: 100%;
-  height: 600px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  gap: 30px;
 }
 .section2 .section2lite .our {
   width: 100%;
@@ -224,30 +253,123 @@ section .sectionlite .textdiv button:hover {
   font-weight: 300;
   line-height: 1.625em;
 }
-.section2 .section2lite .basic {
-  width: 30%;
-  height: 350px;
+.section2 .section2lite .five {
+  width: 100%;
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.section2 .section2lite .five .basic {
+  flex: 1 1 calc(30% - 30px);
+  gap: 30px;
+  display: flex;
   flex-direction: column;
+  padding: 15px;
+  justify-content: center;
   align-items: center;
-  background-color: black;
+  position: relative;
+  transition: 0.5s ease;
 }
-.section2 .section2lite .basic h2 {
-  text-align: center;
+.section2 .section2lite .five .basic .section16 {
+  display: flex;
+  justify-content: space-around;
 }
-.section2 .section2lite .basic p {
-  text-align: center;
+.section2 .section2lite .five .basic .section16 h1 {
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  transition: 0.4s ease;
 }
-.section2 .section2lite .basic:hover {
+.section2 .section2lite .five .basic .section16 h1:hover {
+  color: black;
+}
+.section2 .section2lite .five .basic .section16 h1 i {
+  font-size: 30px;
+  color: #ffffff;
+  transition: 0.3s ease;
+}
+.section2 .section2lite .five .basic .section16 h1 i:hover {
+  color: red;
+  transform: scale(1.1);
+}
+.section2 .section2lite .five .basic .section16 h1 .bi-arrow-repeat {
+  font-size: 30px;
+  color: #ffffff;
+  transition: 0.3s ease;
+}
+.section2 .section2lite .five .basic .section16 h1 .bi-arrow-repeat:hover {
+  color: rgb(0, 255, 42);
+  transform: scale(1.4);
+}
+.section2 .section2lite .five .basic h2 {
+  width: 100%;
+}
+.section2 .section2lite .five .basic h2 i {
+  font-size: 30px;
+  transition: 0.3s ease;
+}
+.section2 .section2lite .five .basic h2 i:hover {
+  color: green;
+  transform: scale(1.1);
+}
+.section2 .section2lite .five .basic p {
+  width: 100%;
+  color: #777777;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.625em;
+  align-items: center;
+}
+.section2 .section2lite .five .basic .bi-heart {
+  position: absolute;
+  top: 40px;
+  left: 300px;
+  font-size: 40px;
+  color: rgb(255, 187, 0);
+  transition: 0.5s ease;
+}
+.section2 .section2lite .five .basic .bi-heart:hover {
+  transform: scale(1.1);
+}
+.section2 .section2lite .five .basic:hover {
   background-color: rgb(255, 187, 0);
 }
-.section2 .section2lite .basic img {
+.section2 .section2lite .five .basic div {
   width: 100%;
-  height: 100%;
+  height: 70%;
+}
+.section2 .section2lite .five .basic div img {
+  width: 100%;
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
 }
+
+@media screen and (max-width: 768px) {
+  .section2 .section2lite .five .basic {
+    flex: 1 1 calc(100% - 30px);
+  }
+}
+.add {
+  width: 100px;
+  height: 50px;
+  background-color: #ffbb00;
+  opacity: 0.9;
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+  position: fixed;
+  z-index: 100;
+  right: 20px;
+  bottom: 40px;
+  border: none;
+  transition: 0.5s ease;
+  border-radius: 999999999px;
+  cursor: pointer;
+}
+.add:hover.add {
+  transform: scale(1.3);
+}
+
 
 .section3 {
   width: 100%;
@@ -266,20 +388,161 @@ section .sectionlite .textdiv button:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 15px;
 }
-.section3 .section3lite .section3div {
-  width: 100%;
-  height: 600px;
+.section3 .section3lite .section3text h1 {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  color: #222222;
+  line-height: 1.2em !important;
+  font-weight: 600;
+}
+.section3 .section3lite .section3text p {
+  color: #777777;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+}
+.section3 .section3div {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
 }
-.section3 .section3lite .section3div div {
-  width: 30%;
+.section3 .section3div .divcont {
+  flex: 1 1 calc(30% - 20px);
+  transition: 0.5s ease;
+  padding: 40px 20px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.section3 .section3div .divcont h2 {
+  font-size: 18px;
+}
+.section3 .section3div .divcont p {
+  color: #777777;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.625em;
+}
+.section3 .section3div .divcont:hover {
+  background-color: #fab700;
+}
+
+@media (max-width: 760px) and (min-width: 500px) {
+  .section3 .section3lite .section3div .divcont {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+@media (max-width: 500px) {
+  .section3 .section3lite .section3div .divcont {
+    flex: 1 1 calc(100% - 20px);
+  }
+}
+.section4 {
+  width: 100%;
+}
+.section4 .section4lite {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.section4 .section4lite .section4text {
+  display: flex;
+  width: 100%;
   height: 200px;
-  background-color: black;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.section4 .section4lite .section4text h1 {
+  font-family: "Poppins", sans-serif;
+  color: #222222;
+  line-height: 1.2em !important;
+  font-weight: 600;
+}
+.section4 .section4lite .section4text p {
+  color: #777777;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+}
+.section4 .section4lite .uzundiv {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.section4 .section4lite .uzundiv .imgdok {
+  flex: 1 1 calc(25% - 40px);
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  padding: 10px;
+  transition: 0.5 ease;
+}
+.section4 .section4lite .uzundiv .imgdok aside {
+  width: 100%;
+  overflow: hidden;
+}
+.section4 .section4lite .uzundiv .imgdok aside img {
+  width: 100%;
+  height: auto;
   transition: 0.5s ease;
 }
-.section3 .section3lite .section3div div:hover {
-  background-color: rgb(255, 187, 0);
+.section4 .section4lite .uzundiv .imgdok span {
+  width: 50%;
+  height: 30px;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section4 .section4lite .uzundiv .imgdok h2 {
+  width: 100%;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  color: #222222;
+  font-size: 18px;
+  transition: 0.5s ease;
+}
+.section4 .section4lite .uzundiv .imgdok p {
+  color: #777777;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.625em;
+}
+.section4 .section4lite .uzundiv .imgdok .heart {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.section4 .section4lite .uzundiv .imgdok .heart h5 {
+  font-weight: 400;
+  color: #777777;
+  font-size: 17px;
+}
+.section4 .section4lite .uzundiv .imgdok:hover aside img {
+  transform: scale(1.1);
+}
+.section4 .section4lite .uzundiv .imgdok:hover h2 {
+  color: darkorange;
+}
+
+@media (max-width: 760px) and (min-width: 500px) {
+  .section4 .section4lite .uzundiv .imgdok {
+    flex: 1 1 calc(50% - 40px);
+  }
+}
+@media (max-width: 500px) {
+  .section4 .section4lite .uzundiv .imgdok {
+    flex: 1 1 calc(100% - 40px);
+  }
 }/*# sourceMappingURL=security.css.map */
