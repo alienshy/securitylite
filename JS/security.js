@@ -1,3 +1,13 @@
+
+
+//////////////////////////////
+//////////////SCROL///////////
+//////////////////////////////
+
+
+
+
+
 window.addEventListener("scroll",()=>{
     if(window.scrollY>100){
         document.querySelector(".div").style.backgroundColor = "rgba(0,0,0,0.8)"
@@ -12,7 +22,11 @@ window.addEventListener("scroll",()=>{
 // });
 
 
-/////////////DATA/////////
+
+//////////////////////////////
+//////////////DATA////////////
+//////////////////////////////
+
 let deyisen = 3;
 function samir(){
 
@@ -23,7 +37,7 @@ fetch('http://localhost:3000/card')
         console.log(data);
         document.querySelector('.five').innerHTML+=`
         <div class="basic">
-                <i class="bi bi-heart"></i>
+                <i class="bi bi-heart" onclick="addFav(${card.id})"></i>
                 <div><img src="${card.image}" alt=""></div>
                 <h2>${card.link} <i id=info class="bi bi-info-circle"></i></h2>
                 <p>${card.text}</p>
@@ -38,7 +52,12 @@ document.querySelector(".load").addEventListener("click",()=> {
     samir()
 })
 
-////////modal//////
+
+//////////////////////////////
+//////////////MODAL///////////
+//////////////////////////////
+
+
 const menu  = document.querySelector(".bi-list-columns")
 const ul = document.querySelector("nav ul")
 
@@ -52,9 +71,29 @@ menu.addEventListener("click",()=>{
     }
 })
 
+
+
+//////////////////////////////
+//////////////DELETE//////////
+//////////////////////////////
+
+
+
 function deleteBtn(id){
     axios.delete(`http://localhost:3000/card/${id}`)
     window.location.reload();
 }
 
 
+//////////////////////////////
+//////////////FAVORITE////////
+//////////////////////////////
+
+
+function addFav(id){
+    axios.get('http://localhost:3000/card/'+id)
+    .then(res=>{
+        console.log(res.data);
+        axios.post('http://localhost:3000/favorites',res.data)
+    })
+}

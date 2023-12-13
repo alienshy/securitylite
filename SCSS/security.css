@@ -647,11 +647,10 @@ footer .ffooter .footer2 div input {
 }
 footer .ffooter .footer3 {
   width: 20%;
-  height: 100px;
+  height: 150px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: space-between;
   color: white;
 }
 footer .ffooter .footer3 h6 {
@@ -673,4 +672,29 @@ footer .ffooter .footer3 .conli {
 }
 footer .ffooter .footer3 .conli i:hover {
   color: rgb(255, 187, 0);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+  footer .ffooter {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  footer .ffooter .footer1 {
+    flex: 1 1 calc(50% - 30px);
+  }
+  footer .ffooter .footer2 {
+    flex: 1 1 calc(50% - 30px);
+  }
+  footer .ffooter .footer3 {
+    flex: 1 1 calc(100% - 30px);
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  footer .ffooter div {
+    flex: 1 1 calc(100% - 30px);
+  }
 }/*# sourceMappingURL=security.css.map */
