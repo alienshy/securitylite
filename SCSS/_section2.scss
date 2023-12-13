@@ -48,34 +48,38 @@
                 justify-content: space-around;
 
 
-                h1 {
-                    font-size: 20px;
-                    color: rgb(255, 255, 255);
+                button {
+                    font-size: 17px;
+                    color:#ffbb00;
+                    padding: 5px;
+                    background-color: black;
                     transition: 0.4s ease;
-
-                    &:hover {
-                        color: black;
-                    }
-
+                    border: none;
+                    cursor: pointer;
+                    border-radius: 10px;
+                    gap: 5px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                     i {
-                        font-size: 30px;
-                        color: #ffffff;
+                        font-size: 20px;
+                        color:#ffbb00;
                         transition: 0.3s ease;
 
                         &:hover {
                             color: red;
-                            transform: scale(1.1);
+                            transform: scale(1.4);
                         }
                     }
 
                     .bi-arrow-repeat {
                         font-size: 30px;
-                        color: #ffffff;
+                        color:#ffbb00;
                         transition: 0.3s ease;
 
                         &:hover {
                             color: rgb(0, 255, 42);
-                            transform: scale(1.4);
+                            transform: scale(1.3);
                         }
                     }
                 }

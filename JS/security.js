@@ -27,7 +27,7 @@ fetch('http://localhost:3000/card')
                 <div><img src="${card.image}" alt=""></div>
                 <h2>${card.link} <i id=info class="bi bi-info-circle"></i></h2>
                 <p>${card.text}</p>
-                    <div class="section16"><h1><i class="bi bi-trash-fill"></i> Delete</h1><h1><i class="bi bi-arrow-repeat"></i> Update</h1></div>
+                    <div class="section16"><button onclick="deleteBtn(${card.id})"><i class="bi bi-trash-fill"></i> Delete</button><button><i class="bi bi-arrow-repeat"></i> Update</button></div>
             </div>
         `
     });
@@ -51,4 +51,10 @@ menu.addEventListener("click",()=>{
 
     }
 })
+
+function deleteBtn(id){
+    axios.delete(`http://localhost:3000/card/${id}`)
+    window.location.reload();
+}
+
 

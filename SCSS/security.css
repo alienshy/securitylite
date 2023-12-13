@@ -274,31 +274,37 @@ section .sectionlite .textdiv button:hover {
   display: flex;
   justify-content: space-around;
 }
-.section2 .section2lite .five .basic .section16 h1 {
-  font-size: 20px;
-  color: rgb(255, 255, 255);
+.section2 .section2lite .five .basic .section16 button {
+  font-size: 17px;
+  color: #ffbb00;
+  padding: 5px;
+  background-color: black;
   transition: 0.4s ease;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  gap: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.section2 .section2lite .five .basic .section16 h1:hover {
-  color: black;
-}
-.section2 .section2lite .five .basic .section16 h1 i {
-  font-size: 30px;
-  color: #ffffff;
+.section2 .section2lite .five .basic .section16 button i {
+  font-size: 20px;
+  color: #ffbb00;
   transition: 0.3s ease;
 }
-.section2 .section2lite .five .basic .section16 h1 i:hover {
+.section2 .section2lite .five .basic .section16 button i:hover {
   color: red;
-  transform: scale(1.1);
+  transform: scale(1.4);
 }
-.section2 .section2lite .five .basic .section16 h1 .bi-arrow-repeat {
+.section2 .section2lite .five .basic .section16 button .bi-arrow-repeat {
   font-size: 30px;
-  color: #ffffff;
+  color: #ffbb00;
   transition: 0.3s ease;
 }
-.section2 .section2lite .five .basic .section16 h1 .bi-arrow-repeat:hover {
+.section2 .section2lite .five .basic .section16 button .bi-arrow-repeat:hover {
   color: rgb(0, 255, 42);
-  transform: scale(1.4);
+  transform: scale(1.3);
 }
 .section2 .section2lite .five .basic h2 {
   width: 100%;
@@ -545,4 +551,126 @@ section .sectionlite .textdiv button:hover {
   .section4 .section4lite .uzundiv .imgdok {
     flex: 1 1 calc(100% - 40px);
   }
+}
+footer {
+  width: 100%;
+  background-color: #04091e;
+  margin-top: 100px;
+}
+footer .ffooter {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+footer .ffooter .footer1 {
+  width: 40%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+}
+footer .ffooter .footer1 h6 {
+  color: #fff;
+  margin-bottom: 25px;
+  font-size: 23px;
+  font-weight: 600;
+}
+footer .ffooter .footer1 p {
+  color: #777777;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.625em;
+}
+footer .ffooter .footer1 h4 {
+  color: #777777;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.625em;
+}
+footer .ffooter .footer1 h5 {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.625em;
+  gap: 5px;
+  color: rgb(255, 187, 0);
+  display: flex;
+}
+footer .ffooter .footer1 h5 i {
+  color: rgb(255, 187, 0);
+}
+footer .ffooter .footer2 {
+  width: 35%;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+}
+footer .ffooter .footer2 h6 {
+  color: #fff;
+  margin-bottom: 25px;
+  font-size: 23px;
+  font-weight: 600;
+}
+footer .ffooter .footer2 p {
+  color: #777777;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.625em;
+}
+footer .ffooter .footer2 div {
+  width: 100%;
+  display: flex;
+}
+footer .ffooter .footer2 div button {
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  border: none;
+  background-color: rgb(255, 187, 0);
+  color: white;
+}
+footer .ffooter .footer2 div input {
+  width: 330px;
+  height: 40px;
+  border: none;
+  padding: 0 10px;
+}
+footer .ffooter .footer3 {
+  width: 20%;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  color: white;
+}
+footer .ffooter .footer3 h6 {
+  color: #fff;
+  margin-bottom: 25px;
+  font-size: 23px;
+  font-weight: 600;
+}
+footer .ffooter .footer3 p {
+  color: #777777;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.625em;
+}
+footer .ffooter .footer3 .conli {
+  display: flex;
+  gap: 20px;
+}
+footer .ffooter .footer3 .conli i:hover {
+  color: rgb(255, 187, 0);
 }/*# sourceMappingURL=security.css.map */
